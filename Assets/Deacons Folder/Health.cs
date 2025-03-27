@@ -21,8 +21,8 @@ namespace TowerDefense{
         }
         public static void TryDamage(GameObject target, int damage)
         {
-            Health healthh = target.GetComponent<Health>();
-            if (target != null) {healthh.TakeDamage(damage); }
+            Health targethealth = target.GetComponent<Health>();
+            if (target != null) {targethealth.TakeDamage(damage); }
         }
         public void EnemyDeath(){
             Destroy(gameObject);
