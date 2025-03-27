@@ -2,19 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+namespace TowerDefense{
+    public class Health : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+     public int currentHealth;
+        void TakeDamage(int damage)
+        {
+            currentHealth -= damage;
+            if(currentHealth <= 0)
+            {
+                if(gameObject.CompareTag("Enemy")){
+                    EnemyDeath();
+                }
+                else if(gameObject.CompareTag("Player")){
+                    PlayerDeath();
+                }
+            }
+        }
+        public static void TryDamage(GameObject target, int damage)
+        {
+            Health healthh = target.GetComponent<Health>();
+            if (target != null) {healthh.TakeDamage(damage); }
+        }
+        public void EnemyDeath(){
+            Destroy(gameObject);
+            // death animation or sound
+        }
+        public void PlayerDeath(){
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+            //send to main screen
+        }
 }
 
 // make a health class for tower defense
+}
+
