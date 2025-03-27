@@ -18,7 +18,7 @@ namespace TowerDefense{
                     PlayerDeath();
                 }
             }
-        }
+        }   
         public static void TryDamage(GameObject target, int damage)
         {
             Health targethealth = target.GetComponent<Health>();
