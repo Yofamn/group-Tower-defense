@@ -18,6 +18,7 @@ Use the stairs, Your father paid good money for those.
 Sorry. I'm excited.
 Here's the graduate.
 We're very proud of you, son.
+A perfect report card, all B's.
 Very proud.
 Ma! I got a thing going here.
 You got lint on your fuzz.
