@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TowerDefense
     {
-    public class ThirdPerson : MonoBehaviour
+    public class TopDown : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()
