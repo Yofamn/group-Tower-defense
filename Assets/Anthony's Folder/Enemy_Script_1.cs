@@ -9,14 +9,11 @@ namespace TowerDefense
     {
         public Path path;
         public int index = 0;
-
         
-        Enemy_SO enemy_SO;
+        public Enemy_SO enemy_SO;
         
-
         void Start()
         {
-            enemy_SO = GetComponent<Enemy_SO>();
             path = FindObjectOfType<Path>();
             StartCoroutine(FollowPath());
         }
@@ -41,6 +38,9 @@ namespace TowerDefense
             //Player player = FindObjectOfType<Player>();
             //Health.TryDamage(player.gameObject,damage);
             //Destroy(gameObject);
+
+            //Delete Later
+            Destroy(gameObject);
         }
     }
 }
